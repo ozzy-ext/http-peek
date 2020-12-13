@@ -6,7 +6,6 @@ namespace HttpPeek
     {
         public MainVm()
         {
-            Title = "Test";
         }
     }
 }
