@@ -3,10 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:HttpPeek"
              xmlns:wpf="clr-namespace:MyLab.Wpf;assembly=MyLab.Wpf"
+             xmlns:vms="clr-namespace:HttpPeek.Vms"
+             xmlns:views="clr-namespace:HttpPeek.Views"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         <local:MainVm x:Key="Design.MainVm"/>
+        <local:MainVm x:Key="Design.MainVm"/>
+        <vms:DesignRootRequestCollectionVm x:Key="Design.RootRequestCollectionVm"/>
 
         <wpf:DefaultTitleConverter x:Key="Converter.Title"/>
+        <views:HttpMethodToColorConverter x:Key="Converter.HttpMethodToColorConverter"
+                                          DefaultBrush="#FF555555"
+                                          GetBrush="BlueViolet"
+                                          PostBrush="MediumSeaGreen"
+                                          PutBrush="DarkGoldenrod"
+                                          PatchBrush="DarkGoldenrod"
+                                          DeleteBrush="OrangeRed"
+                                          OptionsBrush="DodgerBlue"
+                                          HeadBrush="DodgerBlue"/>
+        <views:HttpMethodNameNormConverter x:Key="Converter.HttpMethodNameNormConverter"/>
     </Application.Resources>
 </Application>

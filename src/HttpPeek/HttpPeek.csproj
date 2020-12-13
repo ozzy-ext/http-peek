@@ -15,4 +15,8 @@
     <ProjectReference Include="..\..\..\mylab-wpf\src\MyLab.Wpf\MyLab.Wpf.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Biz\" />
+  </ItemGroup>
+
 </Project>

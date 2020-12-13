@@ -4,9 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HttpPeek"
+        xmlns:views="clr-namespace:HttpPeek.Views"
         mc:Ignorable="d"
         Title="{Binding Converter={StaticResource Converter.Title}}" Height="450" Width="800" d:DataContext="{StaticResource Design.MainVm}">
-    <Grid>
-
+    <Grid DataContext="{Binding CurrentProject}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <views:RequestCollectionView Grid.Column="0" Grid.Row="1" DataContext="{Binding RootCollection}"/>
     </Grid>
 </Window>
