@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:HttpPeek"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+         <local:MainVm x:Key="Design.MainVm"/>
     </Application.Resources>
 </Application>
