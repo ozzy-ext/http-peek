@@ -1,10 +1,15 @@
-﻿using System.Collections.ObjectModel;
+﻿using MyLab.Wpf;
 
 namespace HttpPeek.Vms
 {
-    public class RequestsNodeVm : RequestsNodeBaseVm
+    public class RequestsNodeVm : ViewModel
     {
-        
-        public ObservableCollection<RequestsNodeBaseVm> Children { get; } = new ObservableCollection<RequestsNodeBaseVm>();
+        public virtual bool Expanded { get; set; }
+        public virtual bool Selected { get; set; }
+
+        protected RequestsNodeVm()
+        {
+            
+        }
     }
 }

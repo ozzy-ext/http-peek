@@ -3,6 +3,6 @@
                     xmlns:design="clr-namespace:HttpPeek.Design">
     <design:DesignMainVm x:Key="Design.MainVm"/>
     <design:DesignProjectVm x:Key="Design.ProjectVm"/>
-    <design:DesignRequestsNodeVm x:Key="Design.RequestsNodeVm"/>
+    <design:DesignRequestFolderNodeVm x:Key="Design.RequestsNodeVm"/>
     <design:DesignRequestNodeVm x:Key="Design.RequestNodeVm"/>
 </ResourceDictionary>

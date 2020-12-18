@@ -1,10 +1,10 @@
 ﻿namespace HttpPeek.Vms
 {
-    public class RootRequestsNodeVm : RequestsNodeVm
+    public class RootRequestFolderNodeVm : RequestFolderNodeVm
     {
-        private RequestsNodeBaseVm _selectedNode;
+        private RequestsNodeVm _selectedNode;
 
-        public virtual RequestsNodeBaseVm SelectedNode
+        public virtual RequestsNodeVm SelectedNode
         {
             get => _selectedNode;
             set

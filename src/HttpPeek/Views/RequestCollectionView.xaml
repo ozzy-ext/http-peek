@@ -14,7 +14,7 @@
             <Setter Property="IsSelected" Value="{Binding Selected}"/>
             <Setter Property="Margin" Value="5"></Setter>
         </Style>
-        <HierarchicalDataTemplate DataType="{x:Type vms:RequestsNodeVm}" ItemsSource="{Binding Children}">
+        <HierarchicalDataTemplate DataType="{x:Type vms:RequestFolderNodeVm}" ItemsSource="{Binding Children}">
             <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
                 <Image  Source="{StaticResource Icon.Folder}" Width="16" Height="16"></Image>
                 <TextBlock Text="{Binding Title}" Margin="5 0 0 0"/>

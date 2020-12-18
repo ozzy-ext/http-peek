@@ -3,9 +3,9 @@ using MyLab.Wpf;
 
 namespace HttpPeek.Design
 {
-    public class DesignRequestsNodeVm : RootRequestsNodeVm
+    public class DesignRequestFolderNodeVm : RootRequestFolderNodeVm
     {
-        public DesignRequestsNodeVm()
+        public DesignRequestFolderNodeVm()
         {
             var f = new DesignTimeViewModelFactory();
 
@@ -24,7 +24,7 @@ namespace HttpPeek.Design
             Children.Add(
                 f.Create(() => 
                 
-                new RequestsNodeVm
+                new RequestFolderNodeVm
             {
                 Title = "Request sending",
                 Expanded = true,
@@ -43,7 +43,7 @@ namespace HttpPeek.Design
 
             Children.Add(
                 f.Create(()=>
-                new RequestsNodeVm
+                new RequestFolderNodeVm
             {
                 Title = "Users",
                 Expanded = true,
@@ -59,7 +59,7 @@ namespace HttpPeek.Design
                 }
             }));
 
-            Children.Add(f.Create( () => new RequestsNodeVm
+            Children.Add(f.Create( () => new RequestFolderNodeVm
             {
                 Title = "Management"
             }));
