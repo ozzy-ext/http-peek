@@ -3,23 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vms="clr-namespace:HttpPeek.Vms"
+             xmlns:converters="clr-namespace:MyLab.Wpf.Converters;assembly=MyLab.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              d:DataContext="{StaticResource Design.RequestNodeVm}">
     <UserControl.Resources>
+        <converters:BoolToVisibilityConverter x:Key="Converter.BoolToVis"/>
     </UserControl.Resources>
     <Grid>
         <TabControl>
-            <TabItem Header="{Binding Body.Title}">
+            <TabItem x:Name="bodyTabItem">
+                <TabItem.Header>
+                    <Grid>
+                        <Label Content="{Binding SelectedBody.Title}"
+                               Visibility="{Binding ElementName=bodyTabItem, Path=IsSelected, Converter={StaticResource Converter.BoolToVis}, ConverterParameter='invert'}"/>
+                        <ComboBox ItemsSource="{Binding Bodies}"
+                                  SelectedItem="{Binding SelectedBody, Mode=TwoWay}"
+                                  DisplayMemberPath="Title"
+                                  Visibility="{Binding ElementName=bodyTabItem, Path=IsSelected, Converter={StaticResource Converter.BoolToVis}}"/>
+                    </Grid>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem x:Name="authTabItem">
+                <TabItem.Header>
+                    <Grid>
+                        <Label Content="{Binding SelectedAuth.Title}"
+                               Visibility="{Binding ElementName=authTabItem, Path=IsSelected, Converter={StaticResource Converter.BoolToVis}, ConverterParameter='invert'}"/>
+                        <ComboBox ItemsSource="{Binding Auths}"
+                                  SelectedItem="{Binding SelectedAuth, Mode=TwoWay}"
+                                  DisplayMemberPath="Title"
+                                  Visibility="{Binding ElementName=authTabItem, Path=IsSelected, Converter={StaticResource Converter.BoolToVis}}"/>
+                    </Grid>
+                </TabItem.Header>
+            </TabItem>
+            <TabItem  Tag="query" Header="{Binding Query.Title}">
 
             </TabItem>
-            <TabItem Header="{Binding Auth.Title}">
-
-            </TabItem>
-            <TabItem Header="{Binding Query.Title}">
-
-            </TabItem>
-            <TabItem Header="{Binding Headers.Title}">
+            <TabItem  Tag="headers" Header="{Binding Headers.Title}">
 
             </TabItem>
         </TabControl>

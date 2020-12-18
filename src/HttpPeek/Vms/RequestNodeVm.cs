@@ -1,4 +1,7 @@
-﻿namespace HttpPeek.Vms
+﻿using System.Linq;
+using MyLab.Wpf;
+
+namespace HttpPeek.Vms
 {
     public class RequestNodeVm : RequestsNodeVm
     {
@@ -6,9 +9,25 @@
 
         public virtual string Path { get; set; }
 
-        public virtual RequestBodyVm Body { get; set; } = new DefaultRequestBodyVm();
-        public virtual RequestAuthVm Auth { get; set; } = new DefaultRequestAuthVm();
+        public virtual RequestBodyVm SelectedBody { get; set; }
+        public virtual RequestAuthVm SelectedAuth { get; set; }
         public virtual RequestQueryVm Query { get; } = new RequestQueryVm();
         public virtual RequestHeadersVm Headers { get; } = new RequestHeadersVm();
+
+        public RequestBodyCollection Bodies { get; }
+        public RequestAuthCollection Auths { get; }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="RequestNodeVm"/>
+        /// </summary>
+        public RequestNodeVm(IViewModelFactory f)
+        {
+            Bodies = new RequestBodyCollection(f);
+            SelectedBody = Bodies.OfType<NoBodyRequestBodyVm>().First();
+
+            Auths = new RequestAuthCollection(f);
+            SelectedAuth = Auths.OfType<NoAuthRequestAuthVm>().First();
+
+        }
     }
 }

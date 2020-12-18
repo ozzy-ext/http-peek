@@ -10,7 +10,7 @@ namespace HttpPeek.Design
             var f = new DesignTimeViewModelFactory();
 
             var selected = f.Create(() =>
-                new RequestNodeVm
+                new RequestNodeVm(f)
                 {
 
                     Title = "yandex-2",
@@ -30,7 +30,7 @@ namespace HttpPeek.Design
                 Expanded = true,
                 Children =
                 {
-                    f.Create(()=>new RequestNodeVm
+                    f.Create(()=>new RequestNodeVm(f)
                     { 
                             Title = "yandex",
                             Method = "head",
@@ -49,7 +49,7 @@ namespace HttpPeek.Design
                 Expanded = true,
                 Children =
                 {
-                    f.Create(()=> new RequestNodeVm
+                    f.Create(()=> new RequestNodeVm(f)
                     {
                             Title = "yandex-3",
                             Method = "options",
@@ -64,7 +64,7 @@ namespace HttpPeek.Design
                 Title = "Management"
             }));
 
-            Children.Add(f.Create(() => new RequestNodeVm
+            Children.Add(f.Create(() => new RequestNodeVm(f)
             {
                 
                     Title = "yandex-4",
@@ -73,7 +73,7 @@ namespace HttpPeek.Design
                 
             }));
 
-            Children.Add(f.Create(() => new RequestNodeVm
+            Children.Add(f.Create(() => new RequestNodeVm(f)
             {
                 
                     Title = "yandex-5",
@@ -81,7 +81,7 @@ namespace HttpPeek.Design
                     Path = "http://yandex.ru/something"
                 
             }));
-            Children.Add(f.Create(() => new RequestNodeVm
+            Children.Add(f.Create(() => new RequestNodeVm(f)
             {
                 
                     Title = "google-1",
@@ -90,7 +90,7 @@ namespace HttpPeek.Design
                
             }));
 
-            Children.Add(f.Create(()=> new RequestNodeVm
+            Children.Add(f.Create(()=> new RequestNodeVm(f)
             {
                 
                     Title = "Google-2",
