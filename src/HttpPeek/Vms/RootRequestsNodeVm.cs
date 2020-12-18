@@ -16,6 +16,5 @@
 
 
         public virtual RequestNodeVm SelectedRequest { get; set; }
-
     }
 }

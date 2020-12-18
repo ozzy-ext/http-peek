@@ -6,6 +6,17 @@ namespace HttpPeek.Design
     {
         public DesignRequestsNodeVm()
         {
+            var selected = new RequestNodeVm
+            {
+
+                Title = "yandex-2",
+                Method = "delete",
+                Path = "http://yandex.ru/something",
+                Selected = true
+            };
+
+            SelectedNode = selected;
+
             Children.Add(new RequestsNodeVm
             {
                 Title = "Request sending",
@@ -19,14 +30,7 @@ namespace HttpPeek.Design
                             Path = "http://yandex.ru"
                     },
 
-                    new RequestNodeVm
-                    {
-                      
-                            Title = "yandex-2",
-                            Method = "delete",
-                            Path = "http://yandex.ru/something"
-                      
-                    }
+                    selected
                 }
             }) ;
 

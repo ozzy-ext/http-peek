@@ -5,11 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HttpPeek.Views"
              xmlns:vms="clr-namespace:HttpPeek.Vms"
+             xmlns:wpf="clr-namespace:MyLab.Wpf;assembly=MyLab.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="200" d:DataContext="{StaticResource Design.RequestsNodeVm}">
     <UserControl.Resources>
         <Style TargetType="TreeViewItem">
             <Setter Property="IsExpanded" Value="{Binding Expanded}"/>
+            <Setter Property="IsSelected" Value="{Binding Selected}"/>
             <Setter Property="Margin" Value="5"></Setter>
         </Style>
         <HierarchicalDataTemplate DataType="{x:Type vms:RequestsNodeVm}" ItemsSource="{Binding Children}">
@@ -29,5 +31,7 @@
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
-    <TreeView ItemsSource="{Binding Children}" BorderBrush="Transparent"/>
+    <TreeView ItemsSource="{Binding Children}" 
+              BorderBrush="Transparent"
+              wpf:TreeViewExtension.SelectedItemEx="{Binding SelectedNode, Mode=TwoWay}"/>
 </UserControl>

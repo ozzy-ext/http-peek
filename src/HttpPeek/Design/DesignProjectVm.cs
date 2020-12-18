@@ -10,7 +10,7 @@ namespace HttpPeek.Design
         {
             Title = "Test project";
 
-            Requests = new DesignRequestsNodeVm();
+            Requests = VmFactory.Create<DesignRequestsNodeVm>();
 
         }
     }
