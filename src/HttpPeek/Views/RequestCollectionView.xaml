@@ -22,7 +22,7 @@
         </HierarchicalDataTemplate>
         <DataTemplate DataType="{x:Type vms:RequestNodeVm}">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding Method, Converter={StaticResource Converter.HttpMethodNameNormConverter}}"
+                <TextBlock Text="{Binding Method, Converter={StaticResource Converter.HttpMethodNameNormConverterShort}}"
                            Foreground="{Binding Method, Converter={StaticResource Converter.HttpMethodToColorConverter}}"
                            FontSize="10"
                            Width="30"

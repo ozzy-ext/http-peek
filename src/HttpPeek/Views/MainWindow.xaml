@@ -37,7 +37,10 @@
             d:DataContext="{StaticResource Design.RequestsNodeVm}"
             DataContext="{Binding Requests}"/>
         
-        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Requests.SelectedRequest}"/>
+        <views:RequestQueryString Grid.Row="0" Grid.Column="1" 
+                                  DataContext="{Binding Requests.SelectedRequest}"
+                                  d:DataContext="{StaticResource Design.RequestsNodeVm}"
+                                  Margin="5"/>
     </Grid>
 
 </Window>

@@ -6,7 +6,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Design/DesingRespurces.xaml" />
-                <ResourceDictionary Source="GlobalConverters.xaml" />
+                <ResourceDictionary Source="Views/GlobalConverters.xaml" />
                 <ResourceDictionary Source="Icons/IconsResources.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

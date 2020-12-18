@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="HttpPeek.Views.RequestQueryString"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HttpPeek.Views"
+             xmlns:vms="clr-namespace:HttpPeek.Vms"
+             xmlns:system="clr-namespace:System;assembly=System.Runtime"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="300"
+             d:DataContext="{StaticResource Design.RequestNodeVm}">
+    <UserControl.Resources>
+        <vms:HttpMethodCollection x:Key="HttpMethodCollection"/>
+    </UserControl.Resources>
+    <DockPanel>
+        <ComboBox ItemsSource="{StaticResource HttpMethodCollection}" VerticalContentAlignment="Center"
+                  SelectedItem="{Binding Method, Mode=TwoWay, Converter={StaticResource Converter.HttpMethodNameNormConverter}}"
+                  DockPanel.Dock="Left">
+            <ComboBox.ItemTemplate>
+                <DataTemplate DataType="system:String">
+                    <TextBlock Text="{Binding}" Foreground="{Binding Converter={StaticResource Converter.HttpMethodToColorConverter}}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <Button Content="Send" DockPanel.Dock="Right" Width="50"/>
+        <TextBox Text="{Binding Path}" VerticalContentAlignment="Center" Margin="5"/>
+    </DockPanel>
+</UserControl>

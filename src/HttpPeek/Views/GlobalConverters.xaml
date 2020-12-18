@@ -17,4 +17,5 @@
                                       OptionsBrush="DodgerBlue"
                                       HeadBrush="DodgerBlue"/>
     <views:HttpMethodNameNormConverter x:Key="Converter.HttpMethodNameNormConverter"/>
+    <views:HttpMethodNameNormConverter Short="True" x:Key="Converter.HttpMethodNameNormConverterShort"/>
 </ResourceDictionary>

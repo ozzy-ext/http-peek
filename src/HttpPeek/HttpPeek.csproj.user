@@ -7,16 +7,24 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\RequestQueryString.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Design\DesingRespurces.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="GlobalConverters.xaml">
+    <Page Update="Views\GlobalConverters.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Icons\IconsResources.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RequestQueryString.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
