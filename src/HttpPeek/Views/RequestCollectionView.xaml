@@ -29,5 +29,5 @@
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
-    <TreeView ItemsSource="{Binding Children}"/>
+    <TreeView ItemsSource="{Binding Children}" BorderBrush="Transparent"/>
 </UserControl>

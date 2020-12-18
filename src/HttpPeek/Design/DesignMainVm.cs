@@ -1,4 +1,6 @@
-﻿namespace HttpPeek.Design
+﻿using HttpPeek.Vms;
+
+namespace HttpPeek.Design
 {
     public class DesignMainVm : MainVm
     {

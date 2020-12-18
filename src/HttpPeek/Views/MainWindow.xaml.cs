@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace HttpPeek
+namespace HttpPeek.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

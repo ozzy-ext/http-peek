@@ -1,8 +1,7 @@
 ﻿using HttpPeek.Design;
-using HttpPeek.Vms;
 using MyLab.Wpf;
 
-namespace HttpPeek
+namespace HttpPeek.Vms
 {
     public class MainVm : DialogVm
     {

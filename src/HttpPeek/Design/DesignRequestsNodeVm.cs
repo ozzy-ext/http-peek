@@ -2,7 +2,7 @@
 
 namespace HttpPeek.Design
 {
-    public class DesignRequestsNodeVm : RequestsNodeVm
+    public class DesignRequestsNodeVm : RootRequestsNodeVm
     {
         public DesignRequestsNodeVm()
         {

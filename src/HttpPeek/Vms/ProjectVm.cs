@@ -4,11 +4,11 @@ namespace HttpPeek.Vms
 {
     public class ProjectVm : ViewModel
     {
-        public RequestsNodeVm Requests { get; protected set; }
+        public RootRequestsNodeVm Requests { get; protected set; }
 
         public ProjectVm(IViewModelFactory vmFactory)
         {
-            Requests = vmFactory.Create<RequestsNodeVm>();
+            Requests = vmFactory.Create<RootRequestsNodeVm>();
         }
     }
 }
