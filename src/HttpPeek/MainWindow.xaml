@@ -3,11 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HttpPeek"
         xmlns:views="clr-namespace:HttpPeek.Views"
+        xmlns:vms="clr-namespace:HttpPeek.Vms"
+        xmlns:converters="clr-namespace:MyLab.Wpf.Converters;assembly=MyLab.Wpf"
+        xmlns:design="clr-namespace:HttpPeek.Design"
         mc:Ignorable="d"
-        Title="{Binding Converter={StaticResource Converter.Title}}" Height="450" Width="800" d:DataContext="{StaticResource Design.MainVm}">
-    <Grid DataContext="{Binding CurrentProject}">
+        Title="{Binding Converter={StaticResource Converter.Title}}" 
+        Height="450" 
+        Width="800" 
+        d:DataContext="{StaticResource Design.MainVm}">
+
+    <Window.Resources>
+        <converters:NullConverter x:Key="Converter.NullConverter"/>
+
+        
+    </Window.Resources>
+    <Grid DataContext="{Binding CurrentProject}"
+          Margin="15">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
@@ -17,6 +29,13 @@
             <RowDefinition Height="40"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <views:RequestCollectionView Grid.Column="0" Grid.Row="1" DataContext="{Binding RootCollection}"/>
+        <TextBlock Text="{Binding Title, Converter={StaticResource Converter.NullConverter}}"
+                    FontSize="20" d:DataContext="{StaticResource Design.ProjectVm}" VerticalAlignment="Center" Margin="0 0 0 10"/>
+        <views:RequestCollectionView
+            Grid.Row="1"
+            Grid.Column="0"
+            d:DataContext="{StaticResource Design.RequestsNodeVm}"
+            DataContext="{Binding Requests}"/>
     </Grid>
+
 </Window>

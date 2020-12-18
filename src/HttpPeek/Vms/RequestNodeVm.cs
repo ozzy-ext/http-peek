@@ -1,8 +1,6 @@
-﻿using MyLab.Wpf;
-
-namespace HttpPeek.Vms
+﻿namespace HttpPeek.Vms
 {
-    public class RequestVm : ViewModel
+    public class RequestNodeVm : RequestsNodeBaseVm
     {
         public virtual string Method { get; set; }
 

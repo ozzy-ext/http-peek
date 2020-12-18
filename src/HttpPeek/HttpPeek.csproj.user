@@ -7,15 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\RequestCollectionView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Design\DesingRespurces.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\RequestCollectionView.xaml">
+    <Page Update="GlobalConverters.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Icons\IconsResources.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

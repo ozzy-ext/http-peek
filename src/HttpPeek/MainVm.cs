@@ -1,4 +1,5 @@
-﻿using HttpPeek.Vms;
+﻿using HttpPeek.Design;
+using HttpPeek.Vms;
 using MyLab.Wpf;
 
 namespace HttpPeek
@@ -9,6 +10,8 @@ namespace HttpPeek
 
         public MainVm()
         {
+            Title = "Home";
+            CurrentProject = new DesignProjectVm();
         }
     }
 }
