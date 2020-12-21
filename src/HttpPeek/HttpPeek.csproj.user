@@ -7,10 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\HtmlContentViewer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\RequestDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\RequestQueryString.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ResponseDetails.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ResponsePanel.xaml.cs">
@@ -27,6 +33,9 @@
     <Page Update="Icons\IconsResources.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\HtmlContentViewer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RequestQueryString.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ResponseDetails.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ResponsePanel.xaml">

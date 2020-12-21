@@ -20,4 +20,6 @@
     <converters1:HttpMethodNameNormConverter x:Key="Converter.HttpMethodNameNormConverter"/>
     <converters1:HttpMethodNameNormConverter Short="True" x:Key="Converter.HttpMethodNameNormConverterShort"/>
     <converters:NullToVisibilityConverter x:Key="Converter.NullToVisibilityConverter"/>
+    <converters:BoolToVisibilityConverter x:Key="Converter.BoolToVis"/>
+    <converters:BinaryToStringConverter x:Key="Converter.BinaryToStringConverter"/>
 </ResourceDictionary>

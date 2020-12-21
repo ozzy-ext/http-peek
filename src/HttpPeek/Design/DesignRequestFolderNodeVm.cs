@@ -95,7 +95,8 @@ namespace HttpPeek.Design
                 
                     Title = "Google-2",
                     Method = "patch",
-                    Path = "http://google.com/something"
+                    Path = "http://google.com/something",
+                    Response = f.Create(() => new DesignResponseVm())
                 
             }));
         }
