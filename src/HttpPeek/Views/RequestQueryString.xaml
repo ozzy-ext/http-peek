@@ -23,6 +23,6 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
         <Button Content="Send" DockPanel.Dock="Right" Width="50"/>
-        <TextBox Text="{Binding Path}" VerticalContentAlignment="Center" Margin="5"/>
+        <TextBox Text="{Binding Path}" VerticalContentAlignment="Center" Margin="5 0"/>
     </DockPanel>
 </UserControl>

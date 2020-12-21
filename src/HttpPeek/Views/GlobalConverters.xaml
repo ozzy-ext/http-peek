@@ -4,10 +4,11 @@
                     xmlns:local="clr-namespace:HttpPeek"
                     xmlns:wpf="clr-namespace:MyLab.Wpf;assembly=MyLab.Wpf"
                     xmlns:views="clr-namespace:HttpPeek.Views"
-                    xmlns:converters="clr-namespace:MyLab.Wpf.Converters;assembly=MyLab.Wpf">
+                    xmlns:converters="clr-namespace:MyLab.Wpf.Converters;assembly=MyLab.Wpf"
+                    xmlns:converters1="clr-namespace:HttpPeek.Views.Converters">
 
     <converters:DefaultTitleConverter x:Key="Converter.Title"/>
-    <views:HttpMethodToColorConverter x:Key="Converter.HttpMethodToColorConverter"
+    <converters1:HttpMethodToColorConverter x:Key="Converter.HttpMethodToColorConverter"
                                       DefaultBrush="#FF555555"
                                       GetBrush="BlueViolet"
                                       PostBrush="MediumSeaGreen"
@@ -16,6 +17,7 @@
                                       DeleteBrush="OrangeRed"
                                       OptionsBrush="DodgerBlue"
                                       HeadBrush="DodgerBlue"/>
-    <views:HttpMethodNameNormConverter x:Key="Converter.HttpMethodNameNormConverter"/>
-    <views:HttpMethodNameNormConverter Short="True" x:Key="Converter.HttpMethodNameNormConverterShort"/>
+    <converters1:HttpMethodNameNormConverter x:Key="Converter.HttpMethodNameNormConverter"/>
+    <converters1:HttpMethodNameNormConverter Short="True" x:Key="Converter.HttpMethodNameNormConverterShort"/>
+    <converters:NullToVisibilityConverter x:Key="Converter.NullToVisibilityConverter"/>
 </ResourceDictionary>

@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="HttpPeek.Views.ResponsePanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HttpPeek.Views"
+             xmlns:converters="clr-namespace:HttpPeek.Views.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="300"
+             d:DataContext="{StaticResource Design.ResponseVmOk}">
+    <UserControl.Resources>
+        <converters:HttpCodeToColorConverter x:Key="Converter.HttpCodeToColorConverter"
+                                             DefaultColor="Black"
+                                             Color100="Magenta"
+                                             Color200="LimeGreen"
+                                             Color300="DodgerBlue"
+                                             Color400="Orange"
+                                             Color500="Red"/>
+        <converters:HttpCodeToTextConverter x:Key="Converter.HttpCodeToTextConverter"/>
+        <converters:SizeToStringConverter x:Key="Converter.SizeToStringConverter"/>
+        <converters:DurationToStringConverter x:Key="Converter.DurationToStringConverter"/>
+    </UserControl.Resources>
+    <StackPanel Orientation="Horizontal">
+        <Grid>
+            <Rectangle Fill="{Binding StatusCode, Converter={StaticResource Converter.HttpCodeToColorConverter}}"/>
+            <TextBlock Text="{Binding StatusCode, Converter={StaticResource Converter.HttpCodeToTextConverter}}" 
+                       Foreground="White"
+                       VerticalAlignment="Center"
+                       Margin="5"/>
+        </Grid>
+        <Grid Margin="10 0">
+            <Rectangle Fill="LightGray"/>
+            <TextBlock Text="{Binding Size, Converter={StaticResource Converter.SizeToStringConverter}}" 
+                       VerticalAlignment="Center"
+                       Margin="5"/>
+        </Grid>
+        <Grid>
+            <Rectangle Fill="LightGray"/>
+            <TextBlock Text="{Binding Duration, Converter={StaticResource Converter.DurationToStringConverter}}" 
+                       VerticalAlignment="Center"
+                       Margin="5"/>
+        </Grid>
+    </StackPanel>
+</UserControl>

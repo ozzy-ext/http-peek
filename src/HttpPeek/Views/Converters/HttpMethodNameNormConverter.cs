@@ -1,6 +1,6 @@
 ﻿using MyLab.Wpf.Converters;
 
-namespace HttpPeek.Views
+namespace HttpPeek.Views.Converters
 {
     public class HttpMethodNameNormConverter : ValueConverter<string, string>
     {

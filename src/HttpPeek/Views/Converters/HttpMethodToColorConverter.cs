@@ -1,8 +1,7 @@
 ﻿using System.Windows.Media;
-using MyLab.Wpf;
 using MyLab.Wpf.Converters;
 
-namespace HttpPeek.Views
+namespace HttpPeek.Views.Converters
 {
     public class HttpMethodToColorConverter : ValueConverter<string, Brush>
     {

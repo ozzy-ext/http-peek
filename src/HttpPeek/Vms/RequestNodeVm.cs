@@ -17,6 +17,8 @@ namespace HttpPeek.Vms
         public RequestBodyCollection Bodies { get; }
         public RequestAuthCollection Auths { get; }
 
+        public virtual ResponseVm Response { get; set; }
+
         /// <summary>
         /// Initializes a new instance of <see cref="RequestNodeVm"/>
         /// </summary>

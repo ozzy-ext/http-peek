@@ -5,4 +5,7 @@
     <design:DesignProjectVm x:Key="Design.ProjectVm"/>
     <design:DesignRequestFolderNodeVm x:Key="Design.RequestsNodeVm"/>
     <design:DesignRequestNodeVm x:Key="Design.RequestNodeVm"/>
+    <design:DesignResponseVm x:Key="Design.ResponseVmOk" StatusCode="OK"/>
+    <design:DesignResponseVm x:Key="Design.ResponseVmNotFound" StatusCode="NotFound"/>
+    <design:DesignResponseVm x:Key="Design.ResponseVmInnerError" StatusCode="InternalServerError"/>
 </ResourceDictionary>
