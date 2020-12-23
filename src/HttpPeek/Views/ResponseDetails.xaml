@@ -39,7 +39,7 @@
             <views:ResponseHeaders/>
         </TabItem>
         <TabItem Header="Timeline">
-
+            <views:TimelineViewer/>
         </TabItem>
     </TabControl>
 </UserControl>
