@@ -12,6 +12,7 @@ namespace HttpPeek.Views
     {
         public HtmlContentViewer()
         {
+
             InitializeComponent();
 
             WebBrowser.Navigating += (sender, args) =>

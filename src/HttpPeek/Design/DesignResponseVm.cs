@@ -16,7 +16,11 @@ namespace HttpPeek.Design
             Size = 12345;
             Duration = TimeSpan.FromSeconds(25);
 
-            Content = resp;
+            var contentPresenter = new BrowserPreviewResponseContentPresenterVm {Content = resp };
+
+            ContentPresenters.Add(contentPresenter);
+
+            SelectedContentPresenter = contentPresenter;
         }
     }
 }

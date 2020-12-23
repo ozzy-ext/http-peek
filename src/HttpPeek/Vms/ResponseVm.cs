@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Net;
 using MyLab.Wpf;
 
@@ -12,6 +13,8 @@ namespace HttpPeek.Vms
 
         public TimeSpan Duration { get; set; }
 
-        public byte[] Content { get; set; }
+        public ObservableCollection<ResponseContentPresenterVm> ContentPresenters { get; } = new ObservableCollection<ResponseContentPresenterVm>();
+
+        public virtual ResponseContentPresenterVm SelectedContentPresenter { get; set; }
     }
 }
