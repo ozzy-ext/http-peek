@@ -4,7 +4,7 @@ namespace HttpPeek.Vms
 {
     public class ResponseContentPresenterVm : ViewModel
     {
-        public byte[] Content { get; set; }
+        public string Content { get; set; }
 
         protected ResponseContentPresenterVm()
         {
@@ -17,6 +17,14 @@ namespace HttpPeek.Vms
         public BrowserPreviewResponseContentPresenterVm()
         {
             Title = "Browser";
+        }
+    }
+
+    public class RawResponseContentPresenterVm : ResponseContentPresenterVm
+    {
+        public RawResponseContentPresenterVm()
+        {
+            Title = "Raw";
         }
     }
 }

@@ -8,4 +8,6 @@
     <design:DesignResponseVm x:Key="Design.ResponseVmOk" StatusCode="OK"/>
     <design:DesignResponseVm x:Key="Design.ResponseVmNotFound" StatusCode="NotFound"/>
     <design:DesignResponseVm x:Key="Design.ResponseVmInnerError" StatusCode="InternalServerError"/>
+    <design:DesignBrowserPreviewResponseContentPresenterVm x:Key="Design.BrowserPreview"/>
+    <design:DesignRawResponseContentPresenterVm x:Key="Design.RawPreview"/>
 </ResourceDictionary>

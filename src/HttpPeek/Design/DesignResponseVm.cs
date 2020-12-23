@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Text;
 using HttpPeek.Vms;
 
 namespace HttpPeek.Design
@@ -8,19 +9,18 @@ namespace HttpPeek.Design
     {
         public DesignResponseVm()
         {
-            WebClient cl = new WebClient();
-
-            var resp =cl.DownloadData("http://ya.ru");
-
             StatusCode = HttpStatusCode.OK;
             Size = 12345;
             Duration = TimeSpan.FromSeconds(25);
 
-            var contentPresenter = new BrowserPreviewResponseContentPresenterVm {Content = resp };
+            var strResp = Encoding.UTF8.GetString(DesignResponseContent.Content.Value);
+            var browserCp = new BrowserPreviewResponseContentPresenterVm {Content = strResp };
+            var rawCp = new RawResponseContentPresenterVm{Content = strResp};
 
-            ContentPresenters.Add(contentPresenter);
+            ContentPresenters.Add(browserCp);
+            ContentPresenters.Add(rawCp);
 
-            SelectedContentPresenter = contentPresenter;
+            SelectedContentPresenter = browserCp;
         }
     }
 }

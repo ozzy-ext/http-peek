@@ -27,6 +27,9 @@
                         <DataTemplate DataType="{x:Type vms:BrowserPreviewResponseContentPresenterVm}">
                             <views:HtmlContentViewer/>
                         </DataTemplate>
+                        <DataTemplate DataType="{x:Type vms:RawResponseContentPresenterVm}">
+                            <views:RawContentPresenter/>
+                        </DataTemplate>
                     </ContentControl.Resources>   
                 </ContentControl>
             </Grid>
