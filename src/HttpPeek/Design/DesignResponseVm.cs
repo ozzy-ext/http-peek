@@ -21,6 +21,11 @@ namespace HttpPeek.Design
             ContentPresenters.Add(rawCp);
 
             SelectedContentPresenter = browserCp;
+
+            Headers.Add(new ResponseHeaderVm{Name = "Connection", Value = "Keep-Alive" });
+            Headers.Add(new ResponseHeaderVm{Name = "Content-Encoding", Value = "gzip" });
+            Headers.Add(new ResponseHeaderVm{Name = "Content-Type", Value = "text/html; charset=utf-8" });
+            Headers.Add(new ResponseHeaderVm{Name = "Transfer-Encoding", Value = "chunked" });
         }
     }
 }

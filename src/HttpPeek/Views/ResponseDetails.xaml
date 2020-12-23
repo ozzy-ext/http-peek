@@ -36,7 +36,7 @@
 
         </TabItem>
         <TabItem Header="Headers">
-
+            <views:ResponseHeaders/>
         </TabItem>
         <TabItem Header="Timeline">
 

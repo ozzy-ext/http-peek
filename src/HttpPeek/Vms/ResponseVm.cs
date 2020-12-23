@@ -16,5 +16,7 @@ namespace HttpPeek.Vms
         public ObservableCollection<ResponseContentPresenterVm> ContentPresenters { get; } = new ObservableCollection<ResponseContentPresenterVm>();
 
         public virtual ResponseContentPresenterVm SelectedContentPresenter { get; set; }
+
+        public ObservableCollection<ResponseHeaderVm> Headers { get;  } = new ObservableCollection<ResponseHeaderVm>();
     }
 }
