@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpPeek", "HttpPeek\HttpPeek.csproj", "{DA65A6D3-1033-4043-9DF0-33A7B626087A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLab.Wpf", "..\..\mylab-wpf\src\MyLab.Wpf\MyLab.Wpf.csproj", "{C63EDB18-BBCA-41F6-83F9-42B0308E0844}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLab.Wpf", "..\..\wpf\src\MyLab.Wpf\MyLab.Wpf.csproj", "{C63EDB18-BBCA-41F6-83F9-42B0308E0844}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

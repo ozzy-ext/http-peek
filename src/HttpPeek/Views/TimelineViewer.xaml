@@ -18,7 +18,7 @@
                                                  ResponsePrefix="&lt;"/>
     </UserControl.Resources>
     <Grid>
-        <RichTextBox wpf:RichTextBoxExtension.TextBlocks="{Binding Timeline, Converter={StaticResource Converter.TimelineToDocBlockCollection}}">
+        <RichTextBox wpf:RichTextBoxExtension.TextBlocks="{Binding Timeline, Converter={StaticResource Converter.TimelineToDocBlockCollection}}" IsReadOnly="True">
         </RichTextBox>
     </Grid>
 </UserControl>

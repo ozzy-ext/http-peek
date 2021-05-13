@@ -10,4 +10,5 @@
     <design:DesignResponseVm x:Key="Design.ResponseVmInnerError" StatusCode="InternalServerError"/>
     <design:DesignBrowserPreviewResponseContentPresenterVm x:Key="Design.BrowserPreview"/>
     <design:DesignRawResponseContentPresenterVm x:Key="Design.RawPreview"/>
+    <design:DesignMainMenuFileVm x:Key="Design.DesignMainMenuFileVm"/>
 </ResourceDictionary>

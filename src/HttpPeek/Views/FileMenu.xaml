@@ -1,0 +1,15 @@
+﻿<MenuItem x:Class="HttpPeek.Views.FileMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HttpPeek.Views"
+             mc:Ignorable="d" d:DataContext="{StaticResource Design.DesignMainMenuFileVm}" 
+             Header="File" IsSubmenuOpen="False">
+    <MenuItem Header="New project"/>
+    <MenuItem Header="Open project ..."/>
+    <MenuItem Header="Recent projects" ItemsSource="{Binding RecentProjects}" DisplayMemberPath="Path"
+              IsEnabled="{Binding RecentProjects, Converter={StaticResource Converter.EmptyCollectionToBoolConverter}, ConverterParameter=invert}"/>
+    <Separator/>
+    <MenuItem Header="Exit"/>
+</MenuItem>

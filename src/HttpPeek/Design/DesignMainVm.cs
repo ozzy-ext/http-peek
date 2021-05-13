@@ -7,6 +7,7 @@ namespace HttpPeek.Design
         public DesignMainVm()
         {
             CurrentProject = new DesignProjectVm();
+            MainMenuFile = new DesignMainMenuFileVm();
             Title = "Home (design)";
         }
     }

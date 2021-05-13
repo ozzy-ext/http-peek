@@ -9,6 +9,8 @@
             get => _selectedNode;
             set
             {
+                if (value is RequestFolderNodeVm)
+                    return;
                 _selectedNode = value;
                 SelectedRequest = _selectedNode as RequestNodeVm;
             }
