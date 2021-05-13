@@ -7,7 +7,7 @@ namespace HttpPeek.Vms
 {
     public class MainMenuFileVm : ViewModel
     {
-        private readonly IRecentProjectStorage _recentProjectStorage;
+        private readonly IRecentProjects _recentProjects;
 
         public ObservableCollection<RecentProjectVm> RecentProjects { get; }
             = new ObservableCollection<RecentProjectVm>();
@@ -17,13 +17,13 @@ namespace HttpPeek.Vms
 
         public VmCommand ExitCmd { get; }
 
-        public MainMenuFileVm(IRecentProjectStorage recentProjectStorage)
+        public MainMenuFileVm(IRecentProjects recentProjects)
         {
-            _recentProjectStorage = recentProjectStorage ?? throw new ArgumentNullException(nameof(recentProjectStorage));
+            _recentProjects = recentProjects ?? throw new ArgumentNullException(nameof(recentProjects));
 
             UpdateProjectList();
 
-            _recentProjectStorage.ProjectListChanged += (sender, args) => UpdateProjectList();
+            _recentProjects.ProjectListChanged += (sender, args) => UpdateProjectList();
 
             
         }
@@ -31,7 +31,7 @@ namespace HttpPeek.Vms
         void UpdateProjectList()
         {
             RecentProjects.Clear();
-            foreach (var projectPath in _recentProjectStorage.GetProjects())
+            foreach (var projectPath in _recentProjects.GetProjects())
             {
                 RecentProjects.Add(new RecentProjectVm
                 {

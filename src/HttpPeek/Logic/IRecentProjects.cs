@@ -4,14 +4,14 @@ using System.Linq;
 
 namespace HttpPeek.Logic
 {
-    public interface IRecentProjectStorage
+    public interface IRecentProjects
     {
         event EventHandler ProjectListChanged;
         IEnumerable<string> GetProjects();
         void AddProject(string path);
     }
 
-    class MemoryRecentProjectStorage : IRecentProjectStorage
+    class MemoryRecentProjects : IRecentProjects
     {
         private const int Size = 5;
 

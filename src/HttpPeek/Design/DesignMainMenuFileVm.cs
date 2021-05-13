@@ -5,9 +5,9 @@ namespace HttpPeek.Design
 {
     public class DesignMainMenuFileVm : MainMenuFileVm
     {
-        static IRecentProjectStorage CreateRecentProjectStorage()
+        static IRecentProjects CreateRecentProjectStorage()
         {
-            var s = new MemoryRecentProjectStorage();
+            var s = new MemoryRecentProjects();
             s.AddProject("c:\\\\some-path-project\\yande.htp");
             s.AddProject("c:\\\\some-path-project\\google.htp");
 
