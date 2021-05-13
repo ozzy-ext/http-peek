@@ -3,7 +3,7 @@ using HttpPeek.Vms;
 
 namespace HttpPeek.Design
 {
-    public class DesignMainMenuFileVm : MainMenuFileVm
+    public class DesignRecentProjectsVm : RecentProjectsVm
     {
         static IRecentProjects CreateRecentProjectStorage()
         {
@@ -14,7 +14,7 @@ namespace HttpPeek.Design
             return s;
         }
 
-        public DesignMainMenuFileVm() : base(CreateRecentProjectStorage())
+        public DesignRecentProjectsVm() : base(CreateRecentProjectStorage())
         {
         }
     }

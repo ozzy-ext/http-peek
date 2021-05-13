@@ -1,13 +1,14 @@
 ﻿using HttpPeek.Vms;
+using MyLab.Wpf;
 
 namespace HttpPeek.Design
 {
     public class DesignMainVm : MainVm
     {
-        public DesignMainVm()
+        public DesignMainVm() : base(new DesignTimeViewModelFactory()) 
         {
             CurrentProject = new DesignProjectVm();
-            MainMenuFile = new DesignMainMenuFileVm();
+            RecentProjects = new DesignRecentProjectsVm();
             Title = "Home (design)";
         }
     }
