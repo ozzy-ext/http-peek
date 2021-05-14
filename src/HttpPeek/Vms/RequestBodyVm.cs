@@ -15,7 +15,7 @@ namespace HttpPeek.Vms
 
     public class RequestBodyCollection : Collection<RequestBodyVm>
     {
-        public RequestBodyCollection(IViewModelFactory f)
+        public RequestBodyCollection(IVmFactory f)
         {
             Add(f.Create<MultipartFormRequestBodyVm>());
             Add(f.Create<FormUrlRequestBodyVm>());

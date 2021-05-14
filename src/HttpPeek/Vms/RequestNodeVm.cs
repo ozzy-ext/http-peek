@@ -22,7 +22,7 @@ namespace HttpPeek.Vms
         /// <summary>
         /// Initializes a new instance of <see cref="RequestNodeVm"/>
         /// </summary>
-        public RequestNodeVm(IViewModelFactory f)
+        public RequestNodeVm(IVmFactory f)
         {
             Bodies = new RequestBodyCollection(f);
             SelectedBody = Bodies.OfType<NoBodyRequestBodyVm>().First();

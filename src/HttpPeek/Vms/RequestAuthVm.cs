@@ -13,7 +13,7 @@ namespace HttpPeek.Vms
 
     public class RequestAuthCollection : Collection<RequestAuthVm>
     {
-        public RequestAuthCollection(IViewModelFactory f)
+        public RequestAuthCollection(IVmFactory f)
         {
             Add(f.Create<BasicRequestAuthVm>());
             Add(f.Create<BearerTokenRequestAuthVm>());

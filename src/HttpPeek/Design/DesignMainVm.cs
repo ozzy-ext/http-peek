@@ -5,7 +5,7 @@ namespace HttpPeek.Design
 {
     public class DesignMainVm : MainVm
     {
-        public DesignMainVm() : base(new DesignTimeViewModelFactory()) 
+        public DesignMainVm() : base(new DesignTimeVmFactory()) 
         {
             CurrentProject = new DesignProjectVm();
             RecentProjects = new DesignRecentProjectsVm();

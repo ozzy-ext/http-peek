@@ -11,4 +11,5 @@
     <design:DesignBrowserPreviewResponseContentPresenterVm x:Key="Design.BrowserPreview"/>
     <design:DesignRawResponseContentPresenterVm x:Key="Design.RawPreview"/>
     <design:DesignRecentProjectsVm x:Key="Design.DesignMainMenuFileVm"/>
+    <design:DesignNewProjectVm x:Key="Design.NewProjectVm"/>
 </ResourceDictionary>

@@ -6,7 +6,7 @@ namespace HttpPeek.Design
     public class DesignProjectVm : ProjectVm
     {
         public DesignProjectVm() 
-            : base(new DesignTimeViewModelFactory())
+            : base(new DesignTimeVmFactory())
         {
             Title = "Test project";
 

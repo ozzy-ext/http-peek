@@ -7,7 +7,7 @@ namespace HttpPeek.Design
     public class DesignRequestNodeVm : RequestNodeVm
     {
         public DesignRequestNodeVm()
-        :base(new DesignTimeViewModelFactory())
+        :base(new DesignTimeVmFactory())
         {
             Title = "yandex-2";
             Method = "post";

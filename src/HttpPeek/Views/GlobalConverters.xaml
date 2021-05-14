@@ -23,4 +23,5 @@
     <converters:BoolToVisibilityConverter x:Key="Converter.BoolToVis"/>
     <converters:BinaryToStringConverter x:Key="Converter.BinaryToStringConverter"/>
     <converters:EmptyCollectionToBoolConverter x:Key="Converter.EmptyCollectionToBoolConverter"/>
+    <converters:NullToBoolConverter x:Key="Converter.NullToBoolConverter"/>
 </ResourceDictionary>

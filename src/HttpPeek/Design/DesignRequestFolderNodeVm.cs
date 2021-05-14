@@ -7,7 +7,7 @@ namespace HttpPeek.Design
     {
         public DesignRequestFolderNodeVm()
         {
-            var f = new DesignTimeViewModelFactory();
+            var f = new DesignTimeVmFactory();
 
             var selected = f.Create(() =>
                 new RequestNodeVm(f)

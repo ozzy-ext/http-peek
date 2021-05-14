@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using HttpPeek.Views;
 using HttpPeek.Vms;
 using MyLab.Wpf;
 
@@ -13,7 +14,14 @@ namespace HttpPeek
         {
             base.OnStartup(e);
 
-            this.CreateGuiApp()
+            GuiApp.Create(this)
+                .UseServiceConfiguration((cfg, srv) =>
+                {
+                    srv.AddViewBinding(r =>
+                    {
+                        r.Add<NewProjectDlg, NewProjectVm>();
+                    });
+                })
                 .Start<MainVm>();
 
         }

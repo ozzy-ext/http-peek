@@ -11,10 +11,10 @@
         Title="{Binding Converter={StaticResource Converter.Title}}" 
         Height="800" 
         Width="1200" 
-        d:DataContext="{StaticResource Design.MainVm}">
-
+        d:DataContext="{StaticResource Design.MainVm}"
+        WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <converters:NullConverter x:Key="Converter.NullConverter"/>
+        <converters:NullToStringConverter x:Key="Converter.NullConverter"/>
 
         
     </Window.Resources>
@@ -22,10 +22,11 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
-                <MenuItem Header="New project"/>
+                <MenuItem Header="New project" Command="{Binding NewProjectCmd}"/>
                 <MenuItem Header="Open project ..."/>
                 <MenuItem Header="Recent projects" ItemsSource="{Binding RecentProjects.Projects}" DisplayMemberPath="Path"
                           IsEnabled="{Binding RecentProjects.Projects, Converter={StaticResource Converter.EmptyCollectionToBoolConverter}, ConverterParameter=invert}"/>
+                <MenuItem Header="Reload project" IsEnabled="{Binding CurrentProject, Converter={StaticResource Converter.NullToBoolConverter}, ConverterParameter=invert}"/>
                 <Separator/>
                 <MenuItem Header="Exit"/>
             </MenuItem>
