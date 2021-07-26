@@ -5,8 +5,6 @@ namespace HttpPeek.Vms
 {
     public class RequestBodyVm : ViewModel
     {
-        public string Category { get; set; }
-
         protected RequestBodyVm()
         {
             

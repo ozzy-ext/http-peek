@@ -3,7 +3,7 @@ using MyLab.Wpf;
 
 namespace HttpPeek.Vms
 {
-    public class MainVm : ViewModel
+    public class MainVm : DialogVm
     {
         private readonly IVmFactory _vmFactory;
         private readonly IDialogManager _dialogManager;
@@ -16,7 +16,8 @@ namespace HttpPeek.Vms
         public VmCommand ReloadProjectCmd { get; }
         public VmCommand ExitProjectCmd { get; private set; }
 
-        public MainVm(IVmFactory vmFactory, IDialogManager dialogManager)
+        public MainVm(IVmFactory vmFactory, IDialogManager dialogManager, IDialogCloser closer)
+            : base(new EmptyDialogLogic(), closer)
         {
             _vmFactory = vmFactory;
             _dialogManager = dialogManager;

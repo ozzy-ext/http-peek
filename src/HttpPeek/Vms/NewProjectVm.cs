@@ -6,13 +6,9 @@ namespace HttpPeek.Vms
     {
         public virtual string ProjectName { get; set; }
 
-        public NewProjectVm()
+        public NewProjectVm(IDialogCloser closer) 
+            : base(new EmptyDialogLogic(), closer)
         {
-        }
-
-        protected override bool ValidatePositiveClosing()
-        {
-            return !string.IsNullOrWhiteSpace(ProjectName);
         }
     }
 }
